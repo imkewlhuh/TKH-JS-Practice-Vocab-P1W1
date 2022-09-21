@@ -24,30 +24,34 @@ metrocard > 2.75 ? console.log("you have enough to ride the train") : console.lo
 //3. conditionals 2 (1 pt)
 //a.  complete this codecademy project: https://www.codecademy.com/courses/introduction-to-javascript/projects/magic-eight-ball-1
 //add a screenshot showing your completion of this project to the root folder of this repo
-
+//"8ball.png"
 //4. functions
 //a. write a function named helloWorld that returns the value 'Hello World!'
-
+function helloWorld() {
+    return "Hello World!";
+}
 //b. console log the value returned from running the function helloWorld
-
+console.log(helloWorld());
 //3. arrays
 //a. define a variable myArray and assign it to a value of an array. Give the array at least 5 elements
-
+let myArray = ["bob", 2, true, 25, "dylan"];
 //b. an array's index starts at:
-// 
+//  0
 
 //4. loops
 //a. write a for loop that console logs even numbers starting at 10 and decrementing to 0
-
+for (let i = 10; i >= 0; i -= 2) {
+    console.log(i);
+  }
 //5. objects
 //a. define a variable named 'bike'
-
 //b. assign an object to bike
-
 //c. give the object 3 properties: handlebars, color, wheels
-
 //d. give each property a value
-
+let bike = {
+    handlebars: 'aero handlebars', color: 'blue', wheels: 29
+}
+console.log(bike);
 //6. Chessboard
 /*Write a function that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
 
@@ -66,3 +70,18 @@ When you have a program that generates this pattern, define a binding size = 8.
 
 read and refer to https://eloquentjavascript.net/02_program_structure.html  there are hints at the bottom of the page 
 */
+let chessboard = ""
+function grid(row, column) {
+for (let i = 0; i < row; i += 1) {
+  for(let j = 0; j < column; j += 1) {
+    if ((i + j) % 2 == 0) {
+      chessboard = chessboard + "#"
+    } else {
+      chessboard = chessboard + " "
+    }
+  } chessboard = chessboard + "\n"
+} 
+console.log(chessboard);
+}
+
+grid(8, 8);
